@@ -23,6 +23,6 @@ jobs:
         run: |
           ssh -o StrictHostKeyChecking=no alumno@137.184.127.11               
           "
-            cd ~/lemp-sites/pereyra_franco/repo_firstrepo &&
+            cd ~/lemp-sites/pereyra_franco/firstrepo &&
             git pull origin main
           "
