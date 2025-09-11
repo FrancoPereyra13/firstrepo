@@ -16,6 +16,6 @@ jobs:
       - name: Conectarse al servidor y hacer git pull
         run: |
           ssh -o StrictHostKeyChecking=no alumno@137.184.127.11 "
-            cd ~/lemp-sites/pereyra_franco/prod &&
+            cd ~/lemp-sites/pereyra_franco/prod/firstrepo &&
             git pull origin main
           "
