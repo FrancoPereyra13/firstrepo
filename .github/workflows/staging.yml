@@ -1,0 +1,24 @@
+name: Deploy to Staging
+
+on:
+  push:
+    branches:
+      - develop
+
+jobs:
+  deploy:
+    name: Deploy to Server
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Setup SSH
+        uses: webfactory/ssh-agent@v0.5.4
+        with:
+          ssh-private-key: ${{ secrets.SSH_KEY }}
+
+      - name: Run Deploy Script
+        run: |
+          ssh -o StrictHostKeyChecking=no alumno@137.184.127.11 "
+            cd ~/lemp-sites/pereyra_franco/firstrepo &&
+            git pull origin main
+          "
