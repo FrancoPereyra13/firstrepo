@@ -12,13 +12,13 @@ jobs:
 
     steps:
       - name: Setup SSH
-        uses: webfactory/ssh-agent@v0.5.4  
+        uses: webfactory/ssh-agent@v0.5.4 
         with:
           ssh-private-key: ${{ secrets.SSH_KEY }}
 
       - name: Run Deploy Script
         run: |
           ssh -o StrictHostKeyChecking=no alumno@137.184.127.11 "
-            cd ~/lemp-sites/pereyra_franco/firstrepo &&
+            cd ~/lemp-sites/pereyra_franco/staging &&
             git pull origin main
           "
