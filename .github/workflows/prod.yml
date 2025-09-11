@@ -19,6 +19,6 @@ jobs:
       - name: Run Deploy Script
         run: |
           ssh -o StrictHostKeyChecking=no alumno@137.184.127.11 "
-            cd ~/lemp-sites/pereyra_franco/firstrepo &&
+            cd ~/lemp-sites/pereyra_franco/prod &&
             git pull origin main
           "
