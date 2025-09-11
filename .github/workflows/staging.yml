@@ -16,6 +16,6 @@ jobs:
       - name: Conectarse al servidor y hacer git pull
         run: |
           ssh -o StrictHostKeyChecking=no alumno@137.184.127.11 "
-            cd ~/lemp-sites/pereyra_franco/staging &&
+            cd ~/lemp-sites/pereyra_franco/staging/firstrepo &&
             git pull origin develop
           "
